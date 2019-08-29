@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Programando ando</title>
+	<link rel="shortcut icon" href="img/logo.png" type="image/png"/>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<div class="cont">
+		<nav id="n">
+			<div class="btn-toogle">
+				<img src="img/down-arrow.svg" width="30">
+			</div>
+			<div class="nav-extremo pm">
+				<ul>
+					<li><a href="#">Courses</a></li>
+					<li><a href="page/Materials/page.html">Materials</a></li>
+				</ul>
+			</div>
+			<div class="nav-center">
+				<a href="#"><img src="img/logo.png" height="45"></a>
+			</div>
+			<div class="nav-extremo">
+				<ul>
+					<li><a href="#">Tests</a></li>
+					<li><a href="#">Projects</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<section class="presentation">
+		<div class="container">
+			<div class="panel-1">
+				<div class="enun">
+					<h2>Hello</h2>
+					<h1>We are CJNN</h1>
+					<p>Programmers Junniors</p>
+				</div>
+			</div>
+			<div class="panel-img">
+				<img src="img/illustration1.png" class="img-responsive">
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="ip"></div>
+	</section>
+	
+
+	<script src="js/jquery.js"></script>
+	<script src="js/getipprivate.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e){
+			$(".btn-toogle").click(function(){
+				$(".nav-extremo").toggleClass("active");
+				$("#n").toggleClass("active");
+			});
+		});
+		/*getUserIP(function(ip){
+			$.ajax({url:"php/insertar.php",cache:false,type:"POST",data:{nom:ip},success:function(result){
+				$("#ip").html(result);
+			}});
+			alert("Got IP! :" + ip);
+		});*/
+	</script>
+</body>
+</html>
